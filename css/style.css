@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+body,.container-fluid{
+  margin:0!important;
+  padding:0!important;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.titulo
+{
+  color:#148FD3;
+}
+
+.texto_blanco
+{
+  color:#fff;
+}
+.texto_blanco:hover
+{
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo_nav
+{
+  position: relative;
+  top:-12px;
+  height: 45px;
+}
+
+.title_nav
+{
+  font-weight: bold;
+  font-size:20px;
+  color:#d3476d!important;
+}
+
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #d3476d;
+  border:none;
+}
+.navbar-default .navbar-brand {
+  color: #000000;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fffafa;
+}
+.navbar-default .navbar-text {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #000000;
+  text-align:center;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #222;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #222;
+  background-color: #d3476d;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+  background-color: #d3476d;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #222;
+  background-color: #d3476d;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #222;
+  background-color: #d3476d;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #222;
+  background-color: #d3476d;
+}
+.navbar-default .navbar-toggle {
+  border-color: #d3476d;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #d3476d;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #000000;
+}
+.navbar-default .navbar-link {
+  color: #000000;
+}
+.navbar-default .navbar-link:hover {
+  color: #fffafa;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #000000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fffafa;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fffafa;
+    background-color: #d3476d;
+  }
+}
+
+/*carrusel*/
+.carousel
+{
+  margin-top: -20px;
+}
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+    overflow:hidden;
+}
+.item.active img {
+    width: 100%;
+    height: 400px!important;
+    transition: transform 5000ms linear 0s;
+    /* This should be based on your carousel setting. For bs, it should be 5second*/
+    transform: scale(1.05, 1.05);
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+/*fin de carrusel*/
+
+
+/*tabs*/
+.nav-tabs { border-bottom: 2px solid #DDD; }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; font-size: 12px;}
+    .nav-tabs > li > a { border: none; color: #ffffff;background:#d3466d }
+        .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none;  color: #d3466d !important; background: #fff; }
+        .nav-tabs > li > a::after { content: ""; background: #d3466d height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #d3466d none repeat scroll 0% 0%; color: #fff; }
+.tab-pane { padding: 15px 0; }
+.tab-content{padding:20px}
+.nav-tabs > li  {width:20%; text-align:center;}
+.card {background: #FFF none repeat scroll 0% 0%; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }
+body{ background: #EDECEC; padding:50px}
+
+@media all and (max-width:724px){
+.nav-tabs > li > a > span {display:none;}
+.nav-tabs > li > a {padding: 5px 5px;}
+}
+
+.margenes_abajo_arriba
+{
+  margin-top:45px;
+  margin-bottom: 45px;
+}
+
+
+.margenes_laterales
+{
+  margin-left: 33px;
+  margin-right:  33px;
+}
+
+@media screen and (max-width: 600px)
+{
+  .margenes_laterales
+  {
+      margin-left: -14px!important;
+      margin-right: -14px!important;
+  }
+}
+
+/*portafolio*/
+
+  .portfolio{
+      background:url(assets/images/portfoliobg.jpg) center top no-repeat;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+      overflow: hidden;
+  }
+
+  .portfolio_content{
+      padding-bottom:120px;
+      display:inline-block;
+  }
+  .portfolio .portfolio_content .head_title h3{
+      color:#000000;
+  }
+  .portfolio .portfolio_content .head_title h4{
+      color:#000000;
+  }
+
+  .single_portfolio_text{
+      display:inline-block;
+      padding:0;
+      position:relative;
+      overflow:hidden;
+
+  }
+  .single_portfolio_text img{
+      width:100%;
+      height: 250px;
+  }
+
+  .single_portfolio_text:hover .portfolio_images_overlay{
+      top:5%;
+      left: 5%;
+  }
+
+  .portfolio_images_overlay{
+      width: 90%;
+      height: 90%;
+      background: rgba(0, 0, 0, .5);
+      padding: 20px;
+      margin: 0 auto;
+      top:-100%;
+      left: 5%;
+      position: absolute;
+      transition:.6s;
+  }
+  .portfolio_images_overlay h6{
+      text-transform:uppercase;
+      color:#fff;
+      font-size:2rem;
+      line-height:2.575rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+  }
+
+  .portfolio_images_overlay p.product_price{
+      font-size:2.5725rem;
+      color:#fff;
+      line-height:3rem;
+  }
+  .portfolio_images_overlay .btn{
+      margin-top: 25px;
+  }
+
+  @media (min-width:769px) and (max-width:991px) {
+      .portfolio_images_overlay {
+          padding: 0px;
+      }
+  }
+  @media (max-width:768px) {
+      .portfolio_images_overlay{
+          padding: 170px 20px;
+      }
+  }
+  @media (max-width:580px) {
+      .portfolio_images_overlay{
+          padding: 100px 20px;
+      }
+  }
+  @media (max-width:480px) {
+      .portfolio_images_overlay{
+          padding: 40px 20px;
+      }
+  }
+  @media (max-width:320px) {
+      .portfolio_images_overlay{
+          padding: 20px;
+      }
+  }
+
+/*---redes sociales-----------*/
+
+.first-box{padding:10px;background:#d6917f; min-height: 230px!important; }
+.second-box{padding:10px; background:#148cd3; min-height: 230px!important;  }
+.third-box{padding:10px;background:#C29F71;  min-height: 230px!important; }
+.fourth-box{padding:10px;background:#6CC; min-height: 230px!important; }
+
+/*----------FOOTER-------------------*/
+#footer {
+    border-top: 5px solid #d3466d;
+    background: #178acf none repeat scroll 0% 0%;
+    padding-top: 30px;
+    margin-top: 60px;
+    clear: both;
+    color: #AAA;
+    display: block;
+}
+
+#footer .widgettitle {
+    margin: 0px;
+    padding: 0px 0px 15px;
+    border-bottom: medium none;
+}
+#footer h4 {
+    color: #FFF;
+}
+
+#footer ul {
+    list-style: outside none none;
+}
+
+#footer li {
+    padding: 7px 0px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    margin: 0px;
+}
+
+#footer li a {
+    color: #DDD;
+}
+
+#sub-floor {
+    color: #FFF;
+    background: #d3466d none repeat scroll 0% 0%;
+    padding: 10px 0px;
+}
