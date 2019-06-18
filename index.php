@@ -22,6 +22,35 @@
 	</head>
 
 	<body>
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      xfbml            : true,
+		      version          : 'v3.3'
+		    });
+		  };
+
+		  (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Your customer chat code -->
+		<div class="fb-customerchat"
+		  attribution=setup_tool
+		  page_id="1670977893222837"
+		  theme_color="#5BAEDB">
+		</div>
+
+
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.3&appId=810733245979449&autoLogAppEvents=1"></script>
+
 
 
 		<nav class="navbar navbar-default">
@@ -102,6 +131,8 @@
 					<p>
 						  El lugar ideal para vivir unas espléndidas vacaciones!
 					</p>
+					<div class="fb-like" data-href="https://www.facebook.com/Viajes-AnDy-GDL-1670977893222837/" data-width="" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+
 			</div>
 		</div>
 
@@ -670,6 +701,13 @@
 		    </div>
 			</div>
 		</div>
+
+
+
+		<div class='col-md-12'>
+			<div class="fb-comments" data-href="https://www.facebook.com/Viajes-AnDy-GDL-1670977893222837/" data-width="100%" data-numposts="10"></div>
+		</div>
+
 
 
 
